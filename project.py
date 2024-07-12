@@ -19,14 +19,14 @@ def main():
             break
 
 def getGame():
-    try :        
+    try :
         n = int(input('Welcome to games :), If you want to exit press CTRL + C\nSelect a game :\n- 1 for TicTactoe\n- 2 for Magic 8 Ball\n- 3 for Rock Paper Scissors\nAnswer: '))
         if n not in [1,2,3]:
             raise Exception()
     except (ValueError,Exception):
         print('please Enter a Value 1 or 2')
-        
-    else : 
+
+    else :
         return n
 
 def RockPaperScissors():
@@ -41,7 +41,7 @@ def RockPaperScissors():
         print('You won!')
     else:
         print('You lost!')
-    
+
 
 
 
@@ -56,13 +56,13 @@ def MagicBall():
         print('Magic 8 Ball says : It is certain')
     elif answerNumber == 2:
         print('Magic 8 Ball says : It is decidedly so')
-    elif answerNumber == 3: 
+    elif answerNumber == 3:
         print('Magic 8 Ball says : Yes')
-    elif answerNumber == 4: 
+    elif answerNumber == 4:
         print('Magic 8 Ball says : Reply hazy try again')
-    elif answerNumber == 5: 
+    elif answerNumber == 5:
         print('Magic 8 Ball says : Ask again later')
-    elif answerNumber == 6: 
+    elif answerNumber == 6:
         print('Magic 8 Ball says : Concentrate and ask again')
     elif answerNumber == 7:
         print('Magic 8 Ball says : My reply is no')
@@ -97,9 +97,9 @@ def TicTacToe():
             else :
                 continue
         except (ValueError,KeyError):
-            print("Enter a Value between 1 and 9.")               
+            print("Enter a Value between 1 and 9.")
 
-        
+
 def DefineBoard():
     board = {1: ' ', 2: ' ', 3: ' ',
             4: ' ', 5: ' ', 6: ' ',
@@ -111,7 +111,7 @@ def UpdateBoard(board, player, position):
 def CheckSpot(board,position):
     if board[int(position)] == ' ':
         return True
-    else: 
+    else:
         return False
 def Winner(board,player):
     if board[1] == board[2] == board[3] == player:
@@ -130,7 +130,7 @@ def Winner(board,player):
         return True
     elif board[3] == board[5] == board[7] == player:
         return True
-    else : 
+    else :
         return False
 
 
